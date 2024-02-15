@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Aplicación del Clima</title>
+    <title>Weather App</title>
 </head>
+
 <body>
-  <div class="contenedor">
-    <h1>Clima Actual</h1>
-    <input type="text" id="ciudadEntrada" placeholder="Ingrese una ciudad">
-    <button id="botonBusqueda">Buscar</button>
-    <div id="datosClima"></div>
-  </div>
-  <script src="main.js"></script>
+    <h1>Clima Actual </h1>
+    <div class="container">
+        <div class="form-box">
+            <form class="form" id="formBusqueda">
+                <input type="text" id="ciudadEntrada" placeholder="Ingrese una ciudad" required>
+                <div>
+                    <button type="submit">Buscar</button>
+                    <button id="mostrarDatosLocalStorage">lista de resultado </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="result-box card">
+            <div id="datosClima" class="result"></div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span id="cerrarModal" class="close">&times;</span>
+            <div id="modalContent">
+                <h2>Historial de busquedas</h2>
+                <div id="datosLocalStorage"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
